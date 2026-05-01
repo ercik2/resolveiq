@@ -1,0 +1,5 @@
+node_modules/
+helpdesk/node_modules/
+helpdesk-frontend/node_modules/
+helpdesk-frontend/build/
+helpdesk/.env
