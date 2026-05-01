@@ -40,7 +40,7 @@ const DetalleTicket = () => {
 
     const actualizarEstado = async (nuevoEstado) => {
         try {
-            const agenteId = (usuario.rol === 'agente' || usuario.rol === 'admin') ? usuario.id : ticket.agente_id;
+            const agenteId = ticket.agente_id ? ticket.agente_id : (usuario.rol === 'agente' || usuario.rol === 'admin') ? usuario.id : null;
             await api.put(`/tickets/${id}`, {
                 estado: nuevoEstado,
                 prioridad: ticket.prioridad,
