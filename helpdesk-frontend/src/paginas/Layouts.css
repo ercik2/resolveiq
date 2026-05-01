@@ -1,0 +1,200 @@
+.layout-contenedor {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F3F5F8;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1A2B4A;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    transition: left 0.3s ease;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-icono {
+    background-color: #2D6BE4;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.logo-texto {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 16px 12px;
+    overflow-y: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #A8B3C9;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background-color: rgba(45,107,228,0.2);
+    color: white;
+}
+
+.nav-item-activo {
+    background-color: #2D6BE4;
+    color: white;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    background-color: #2D6BE4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.usuario-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.usuario-nombre {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.usuario-rol {
+    color: #A8B3C9;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.boton-logout {
+    background-color: transparent;
+    border: none;
+    color: #A8B3C9;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+}
+
+.cabecera-movil {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 98;
+}
+
+.hamburguesa {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #1A2B4A;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 99;
+}
+
+.overlay-activo {
+    display: block;
+}
+
+.contenido-principal {
+    margin-left: 240px;
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -240px;
+    }
+
+    .sidebar-abierto {
+        left: 0;
+    }
+
+    .cabecera-movil {
+        display: flex;
+    }
+
+    .contenido-principal {
+        margin-left: 0;
+        padding: 80px 16px 16px 16px;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .overlay-activo {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-principal {
+        padding: 70px 12px 12px 12px;
+    }
+}
