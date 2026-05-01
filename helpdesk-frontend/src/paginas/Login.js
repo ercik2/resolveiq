@@ -31,7 +31,7 @@ const Login = () => {
                 <div style={estilos.panelIzquierdo}>
                     <div style={estilos.logoContenedor}>
                         <span style={estilos.logoIcono}>HD</span>
-                        <span style={estilos.logoTexto}>HelpDesk</span>
+                        <span style={estilos.logoTexto}>ResolveIQ</span>
                     </div>
                     <h2 style={estilos.panelTitulo}>Gestiona incidencias de forma eficiente</h2>
                     <p style={estilos.panelSubtitulo}>Plataforma centralizada para el seguimiento y resolución de tickets de soporte.</p>

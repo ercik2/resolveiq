@@ -42,7 +42,7 @@ const CambiarPassword = () => {
                 <div style={estilos.panelIzquierdo}>
                     <div style={estilos.logoContenedor}>
                         <span style={estilos.logoIcono}>HD</span>
-                        <span style={estilos.logoTexto}>HelpDesk</span>
+                        <span style={estilos.logoTexto}>ResolveIQ</span>
                     </div>
                     <h2 style={estilos.panelTitulo}>Bienvenido/a, {usuario?.nombre}</h2>
                     <p style={estilos.panelSubtitulo}>Por seguridad, debes cambiar tu contraseña antes de continuar.</p>
