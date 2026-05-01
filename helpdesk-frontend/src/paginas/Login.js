@@ -30,7 +30,7 @@ const Login = () => {
             <div style={estilos.panel}>
                 <div style={estilos.panelIzquierdo}>
                     <div style={estilos.logoContenedor}>
-                        <span style={estilos.logoIcono}>HD</span>
+                        <span style={estilos.logoIcono}>RI</span>
                         <span style={estilos.logoTexto}>ResolveIQ</span>
                     </div>
                     <h2 style={estilos.panelTitulo}>Gestiona incidencias de forma eficiente</h2>

@@ -28,7 +28,7 @@ const Layouts = ({ children }) => {
 
             <div className={`sidebar ${menuAbierto ? 'sidebar-abierto' : ''}`}>
                 <div className="sidebar-logo">
-                    <span className="logo-icono">HD</span>
+                    <span className="logo-icono">RI</span>
                     <span className="logo-texto">ResolveIQ</span>
                 </div>
 
@@ -58,7 +58,7 @@ const Layouts = ({ children }) => {
             <div className="cabecera-movil">
                 <button className="hamburguesa" onClick={() => setMenuAbierto(!menuAbierto)}>☰</button>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="logo-icono">HD</span>
+                    <span className="logo-icono">RI</span>
                     <span style={{ fontWeight: 'bold', color: '#1A2B4A' }}>ResolveIQ</span>
                 </div>
                 <div className="avatar">{iniciales}</div>
