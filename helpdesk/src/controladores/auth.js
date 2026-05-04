@@ -71,6 +71,10 @@ const obtenerUsuarios = async (req, res) => {
 
 const eliminarUsuario = async (req, res) => {
     try {
+        await conexion.query('DELETE FROM comentarios WHERE user_id = ?', [req.params.id]);
+        await conexion.query('DELETE FROM comentarios WHERE ticket_id IN (SELECT id FROM tickets WHERE user_id = ?)', [req.params.id]);
+        await conexion.query('UPDATE tickets SET agente_id = NULL WHERE agente_id = ?', [req.params.id]);
+        await conexion.query('DELETE FROM tickets WHERE user_id = ?', [req.params.id]);
         await conexion.query('DELETE FROM users WHERE id = ?', [req.params.id]);
         res.json({ mensaje: 'Usuario eliminado correctamente' });
     } catch (error) {
